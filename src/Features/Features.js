@@ -10,6 +10,7 @@ export default class App extends Component {
     render() {
        return Object.keys(this.props.features).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
+
             const options = this.props.features[feature].map(item => {
                 const itemHash = slugify(JSON.stringify(item));
                 return (
